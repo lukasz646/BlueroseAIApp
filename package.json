@@ -8,7 +8,15 @@
     "web": "expo start --web",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "api": "node server.js"
+    "api": "node server.js",
+    "start:dev": "EXPO_USE_DEV_SERVER=true expo start --clear",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "check": "npm run lint && npm run typecheck",
+    "mock": "cross-env MOCK_API=1 expo start",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "expo": "~54.0.10",
@@ -29,6 +37,16 @@
     "@types/react": "~19.1.10",
     "@types/react-native": "~0.73.0",
     "babel-plugin-module-resolver": "^5.0.2",
+    "prettier": "^3.6.2",
     "typescript": "~5.9.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
   }
 }

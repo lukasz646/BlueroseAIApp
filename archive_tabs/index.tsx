@@ -1,9 +1,9 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 
-import BotSettingsScreen from '../BotSettingsScreen'; // <-- kluczowa poprawka
-import BotStatusScreen from './BotStatusScreen';
-import HomeScreen from './HomeScreen';
+import BotSettingsScreen from "../BotSettingsScreen"; // <-- kluczowa poprawka
+import BotStatusScreen from "./BotStatusScreen";
+import HomeScreen from "./HomeScreen";
 
 const Tab = createBottomTabNavigator();
 

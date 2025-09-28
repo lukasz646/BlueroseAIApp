@@ -1,5 +1,5 @@
-import { Tabs } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
+import { Tabs } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabsLayout() {
   return (
@@ -7,7 +7,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="dashboard"
         options={{
-          title: 'Dashboard',
+          title: "Dashboard",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
@@ -16,7 +16,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="botStatus"
         options={{
-          title: 'Status',
+          title: "Status",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="pulse" size={size} color={color} />
           ),
@@ -25,7 +25,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="settings"
         options={{
-          title: 'Ustawienia',
+          title: "Ustawienia",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="settings" size={size} color={color} />
           ),

@@ -1,5 +1,8 @@
-import { Text as DefaultText, TextProps as DefaultTextProps } from 'react-native';
-import { useThemeColor } from './Themed';
+import {
+  Text as DefaultText,
+  TextProps as DefaultTextProps,
+} from "react-native";
+import { useThemeColor } from "./Themed";
 
 type TextProps = DefaultTextProps & {
   lightColor?: string;
@@ -8,7 +11,7 @@ type TextProps = DefaultTextProps & {
 
 export function Text(props: TextProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
 
   return <DefaultText style={[{ color }, style]} {...otherProps} />;
 }
